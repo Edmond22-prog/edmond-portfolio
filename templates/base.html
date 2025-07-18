@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edmond Makolle - Backend Engineer & Community Leader</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="static/css/styles.css">
+    <style>
+    </style>
+</head>
+<body>
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">EM.</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home" data-page="home">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#career" data-page="career">Parcours</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#community" data-page="community">Communautés</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#publications" data-page="publications">Publications</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects" data-page="projects">Projets</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact" data-page="contact">Contact</a>
+                    </li>
+                </ul>
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="section active hero">
+        <div class="hero-bg"></div>
+        <div class="floating-shapes">
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+        </div>
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6">
+                    <div class="hero-content">
+                        <h1>Edmond Makolle</h1>
+                        <p class="hero-subtitle code-font">Backend Engineer & Community Leader</p>
+                        <p class="hero-description">
+                            Passionné par Python et Django, je construis des solutions backend robustes tout en contribuant activement à l'écosystème tech camerounais. Membre de la Django Software Foundation.
+                        </p>
+                        <div class="d-flex gap-3 mb-4">
+                            <a href="#projects" class="btn btn-primary">Voir mes projets</a>
+                            <a href="#contact" class="btn btn-outline">Me contacter</a>
+                        </div>
+                        <div class="tech-stack">
+                            <div class="tech-badge">
+                                <i class="fab fa-python"></i> Python
+                            </div>
+                            <div class="tech-badge">
+                                <i class="fas fa-code"></i> Django
+                            </div>
+                            <div class="tech-badge">
+                                <i class="fas fa-bolt"></i> FastAPI
+                            </div>
+                            <div class="tech-badge">
+                                <i class="fab fa-google"></i> Cloud Run
+                            </div>
+                            <div class="tech-badge">
+                                <i class="fas fa-database"></i> PostgreSQL
+                            </div>
+                            <div class="tech-badge">
+                                <i class="fas fa-mobile-alt"></i> Flutter
+                            </div>
+                        </div>
+                        <div class="social-links">
+                            <a href="https://github.com/Edmond22-prog" class="social-link" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/edmondmakolle/" class="social-link" target="_blank">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://edmondmakolle.medium.com/" class="social-link" target="_blank">
+                                <i class="fab fa-medium"></i>
+                            </a>
+                            <a href="https://twitter.com/EdmondMakolle" class="social-link" target="_blank">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="text-center">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 500'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%232563eb;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%231e40af;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='250' cy='250' r='200' fill='url(%23grad)'/%3E%3Ctext x='250' y='270' font-family='Arial' font-size='120' font-weight='bold' text-anchor='middle' fill='white'%3EEM%3C/text%3E%3C/svg%3E" 
+                             alt="Edmond Makolle" 
+                             class="img-fluid rounded-circle"
+                             style="max-width: 400px; animation: float 6s ease-in-out infinite;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Career Section -->
+    <section id="career" class="section">
+        <div class="container">
+            <h2 class="section-title">Parcours Professionnel</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="custom-card">
+                        <h3>Backend Engineer</h3>
+                        <h5 class="text-primary">Bubo</h5>
+                        <p class="text-muted">Janvier 2024 - Présent</p>
+                        <p>Développement d'applications backend scalables avec Django et FastAPI. Implementation d'APIs RESTful et GraphQL pour des applications mobiles et web.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Django</span>
+                            <span class="tech-tag">FastAPI</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">Docker</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="custom-card">
+                        <h3>Freelance Python Instructor</h3>
+                        <h5 class="text-primary">Indépendant</h5>
+                        <p class="text-muted">2022 - Présent</p>
+                        <p>Formation et mentorat de développeurs juniors en Python et Django. Création de contenu pédagogique et animation de workshops techniques.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Django</span>
+                            <span class="tech-tag">Teaching</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="custom-card">
+                        <h3>Stagiaire Développeur</h3>
+                        <h5 class="text-primary">CUTI - Université de Yaoundé I</h5>
+                        <p class="text-muted">2022 - 2023</p>
+                        <p>Stage d'un an en développement d'applications. Participation à des projets universitaires et contribution au système d'information de l'université.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Web Development</span>
+                            <span class="tech-tag">Database</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="custom-card">
+                        <h3>Étudiant en Informatique</h3>
+                        <h5 class="text-primary">Université de Yaoundé I</h5>
+                        <p class="text-muted">2020 - Présent</p>
+                        <p>Licence en Informatique Fondamentale (Niveau 3). Focus sur l'algorithmique, les structures de données et le génie logiciel.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Computer Science</span>
+                            <span class="tech-tag">Algorithms</span>
+                            <span class="tech-tag">Software Engineering</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Section -->
+    <section id="community" class="section">
+        <div class="container">
+            <h2 class="section-title">Engagement Communautaire</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="community-card h-100">
+                        <div class="community-icon">
+                            <i class="fab fa-google"></i>
+                        </div>
+                        <h3>GDG Yaoundé</h3>
+                        <h5 class="text-primary mb-3">Co-Lead</h5>
+                        <p>Organisation d'événements techniques gratuits sur les technologies Google. Animation du DevFest Yaoundé 2024 et de workshops mensuels.</p>
+                        <div class="mt-3">
+                            <small class="text-muted">500+ membres actifs</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="community-card h-100">
+                        <div class="community-icon">
+                            <i class="fab fa-python"></i>
+                        </div>
+                        <h3>Django Cameroon</h3>
+                        <h5 class="text-primary mb-3">Community Lead</h5>
+                        <p>Animation de la communauté Django au Cameroun. Organisation de meetups et de sessions de coding pour promouvoir le framework.</p>
+                        <div class="mt-3">
+                            <small class="text-muted">Django Software Foundation Member</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="community-card h-100">
+                        <div class="community-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3>Computer Club UY1</h3>
+                        <h5 class="text-primary mb-3">Manager</h5>
+                        <p>Gestion du club informatique de l'Université de Yaoundé I. Mentorat des étudiants et organisation d'hackathons.</p>
+                        <div class="mt-3">
+                            <small class="text-muted">200+ étudiants</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="community-card h-100">
+                        <div class="community-icon">
+                            <i class="fab fa-python"></i>
+                        </div>
+                        <h3>Python Cameroon</h3>
+                        <h5 class="text-primary mb-3">Co-Organizer</h5>
+                        <p>Promotion de Python au Cameroun à travers des workshops, des bootcamps et du contenu éducatif en français.</p>
+                        <div class="mt-3">
+                            <small class="text-muted">1000+ développeurs</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="community-card h-100">
+                        <div class="community-icon">
+                            <i class="fas fa-microphone"></i>
+                        </div>
+                        <h3>Speaker Technique</h3>
+                        <h5 class="text-primary mb-3">Conférencier</h5>
+                        <p>Interventions lors de conférences tech sur Django, FastAPI, Python et Google Cloud Platform.</p>
+                        <div class="mt-3">
+                            <small class="text-muted">10+ talks donnés</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="community-card h-100">
+                        <div class="community-icon">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <h3>Mentor Tech</h3>
+                        <h5 class="text-primary mb-3">Formateur</h5>
+                        <p>Accompagnement de développeurs juniors dans leur apprentissage de Python et du développement backend.</p>
+                        <div class="mt-3">
+                            <small class="text-muted">50+ mentorés</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="section">
+        <div class="container">
+            <h2 class="section-title">Publications & Présentations</h2>
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="custom-card h-100">
+                        <h3>Articles Techniques</h3>
+                        <div class="mt-4">
+                            <div class="mb-4">
+                                <h5>Introduction à Django REST Framework</h5>
+                                <p class="text-muted">Guide complet pour créer des APIs RESTful avec Django</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <small class="text-muted">15 min de lecture • 2024</small>
+                                    <a href="https://edmondmakolle.medium.com/" class="btn btn-sm btn-outline-primary">
+                                        <i class="fas fa-external-link-alt"></i> Lire
+                                    </a>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="mb-4">
+                                <h5>Déploiement avec Google Cloud Run</h5>
+                                <p class="text-muted">Comment déployer vos applications Python sur Cloud Run</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <small class="text-muted">10 min de lecture • 2024</small>
+                                    <a href="https://edmondmakolle.medium.com/" class="btn btn-sm btn-outline-primary">
+                                        <i class="fas fa-external-link-alt"></i> Lire
+                                    </a>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="mb-4">
+                                <h5>FastAPI vs Django : Comparaison</h5>
+                                <p class="text-muted">Quel framework Python choisir pour votre projet ?</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <small class="text-muted">12 min de lecture • 2023</small>
+                                    <a href="https://edmondmakolle.medium.com/" class="btn btn-sm btn-outline-primary">
+                                        <i class="fas fa-external-link-alt"></i> Lire
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="custom-card h-100">
+                        <h3>Workshops & Talks</h3>
+                        <div class="mt-4">
+                            <div class="mb-4">
+                                <h5>Deploy an Application with Cloud Run</h5>
+                                <p class="text-muted">Workshop pratique sur le déploiement d'applications</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <small class="text-muted">DevFest Yaoundé 2024</small>
+                                    <a href="https://sessionize.com/edmond-makolle/" class="btn btn-sm btn-outline-primary">
+                                        <i class="fas fa-play-circle"></i> Slides
+                                    </a>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="mb-4">
+                                <h5>Building REST APIs with Django</h5>
+                                <p class="text-muted">Introduction à Django REST Framework</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <small class="text-muted">GDG Yaoundé Meetup</small>
+                                    <a href="#" class="btn btn-sm btn-outline-primary">
+                                        <i class="fas fa-play-circle"></i> Slides
+                                    </a>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="mb-4">
+                                <h5>Python pour les Débutants</h5>
+                                <p class="text-muted">Workshop d'initiation à la programmation Python</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <small class="text-muted">Computer Club UY1</small>
+                                    <a href="#" class="btn btn-sm btn-outline-primary">
+                                        <i class="fas fa-play-circle"></i> Slides
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <a href="https://edmondmakolle.medium.com/" target="_blank" class="btn btn-primary">
+                    <i class="fab fa-medium"></i> Voir tous mes articles
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Projets Personnels</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <div class="project-content">
+                            <h4>Calories App</h4>
+                            <p>Application mobile de calcul et suivi des calories avec interface intuitive.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Dart</span>
+                                <span class="tech-tag">Flutter</span>
+                                <span class="tech-tag">SQLite</span>
+                            </div>
+                            <div class="d-flex gap-2 mt-3">
+                                <a href="https://github.com/Edmond22-prog/calories_app" class="btn btn-sm btn-outline-primary">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                                <a href="#" class="btn btn-sm btn-primary">
+                                    <i class="fas fa-external-link-alt"></i> Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <i class="fas fa-sitemap"></i>
+                        </div>
+                        <div class="project-content">
+                            <h4>Design Patterns Project</h4>
+                            <p>Implementation de design patterns classiques en Java avec exemples pratiques.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Java</span>
+                                <span class="tech-tag">OOP</span>
+                                <span class="tech-tag">Patterns</span>
+                            </div>
+                            <div class="d-flex gap-2 mt-3">
+                                <a href="https://github.com/Edmond22-prog/design-patterns-project" class="btn btn-sm btn-outline-primary">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="project-content">
+                            <h4>Top Quiz Kotlin</h4>
+                            <p>Application Android de quiz interactif avec système de scores et classements.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Kotlin</span>
+                                <span class="tech-tag">Android</span>
+                                <span class="tech-tag">Room DB</span>
+                            </div>
+                            <div class="d-flex gap-2 mt-3">
+                                <a href="https://github.com/Edmond22-prog/Top-Quiz-Kotlin" class="btn btn-sm btn-outline-primary">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <div class="project-content">
+                            <h4>Django Todo Workshop</h4>
+                            <p>Application todo list complète pour apprendre Django avec authentification.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Django</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Bootstrap</span>
+                            </div>
+                            <div class="d-flex gap-2 mt-3">
+                                <a href="https://github.com/Edmond22-prog" class="btn btn-sm btn-outline-primary">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <div class="project-content">
+                            <h4>Sponsorship Script</h4>
+                            <p>Script d'automatisation pour la gestion de sponsorships et partenariats.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Automation</span>
+                                <span class="tech-tag">APIs</span>
+                            </div>
+                            <div class="d-flex gap-2 mt-3">
+                                <a href="https://github.com/Edmond22-prog" class="btn btn-sm btn-outline-primary">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <i class="fas fa-school"></i>
+                        </div>
+                        <div class="project-content">
+                            <h4>School Management System</h4>
+                            <p>Système de gestion scolaire complet avec Django et interface admin.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Django</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                                <span class="tech-tag">REST API</span>
+                            </div>
+                            <div class="d-flex gap-2 mt-3">
+                                <a href="https://github.com/Edmond22-prog" class="btn btn-sm btn-outline-primary">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <a href="https://github.com/Edmond22-prog" target="_blank" class="btn btn-primary">
+                    <i class="fab fa-github"></i> Voir tous mes projets sur GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Contactez-moi</h2>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="custom-card h-100">
+                        <h3 class="mb-4">Restons en contact !</h3>
+                        <p class="mb-4">
+                            Je suis toujours ouvert aux nouvelles opportunités, collaborations et discussions techniques. 
+                            N'hésitez pas à me contacter pour vos projets, questions ou simplement pour échanger sur la tech !
+                        </p>
+                        <div class="contact-info">
+                            <i class="contact-icon fas fa-envelope"></i>
+                            <div>
+                                <h5 class="mb-0">Email</h5>
+                                <p class="mb-0 text-muted">edmond.makolle@example.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-info">
+                            <i class="contact-icon fas fa-map-marker-alt"></i>
+                            <div>
+                                <h5 class="mb-0">Localisation</h5>
+                                <p class="mb-0 text-muted">Yaoundé, Cameroun</p>
+                            </div>
+                        </div>
+                        <div class="contact-info">
+                            <i class="contact-icon fas fa-language"></i>
+                            <div>
+                                <h5 class="mb-0">Langues</h5>
+                                <p class="mb-0 text-muted">Français, Anglais</p>
+                            </div>
+                        </div>
+                        <div class="social-links justify-content-start">
+                            <a href="https://github.com/Edmond22-prog" class="social-link" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/edmondmakolle/" class="social-link" target="_blank">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://edmondmakolle.medium.com/" class="social-link" target="_blank">
+                                <i class="fab fa-medium"></i>
+                            </a>
+                            <a href="https://twitter.com/EdmondMakolle" class="social-link" target="_blank">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="custom-card h-100">
+                        <h3 class="mb-4">Envoyez-moi un message</h3>
+                        <form id="contactForm">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Nom complet</label>
+                                <input type="text" class="form-control" id="name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="subject" class="form-label">Sujet</label>
+                                <input type="text" class="form-control" id="subject" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control" id="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">
+                                <i class="fas fa-paper-plane"></i> Envoyer le message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Color Picker -->
+    <!-- div class="color-picker">
+        <div class="d-flex">
+            <div class="color-option active" style="background: #2563eb;" data-color="#2563eb"></div>
+            <div class="color-option" style="background: #dc2626;" data-color="#dc2626"></div>
+            <div class="color-option" style="background: #16a34a;" data-color="#16a34a"></div>
+            <div class="color-option" style="background: #9333ea;" data-color="#9333ea"></div>
+            <div class="color-option" style="background: #ea580c;" data-color="#ea580c"></div>
+        </div>
+    </div -->
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="static/js/script.js"></script>
+</body>
+</html>
