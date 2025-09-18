@@ -7,8 +7,12 @@
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="custom-card">
-                        <h3><strong>{{ exp.title }}</strong></h3>
-                        <a href="{{ exp.company_url }}"><h5 class="text-primary">{{ exp.company_name }}</h5></a>
+                        <h3 style="font-family: 'Playfair Display', serif; font-weight: 600;"><strong>{{ exp.title }}</strong></h3>
+                        <a href="{{ exp.company_url }}">
+                            <h5 class="text-primary" style="font-family: 'Lato', sans-serif; font-weight: 400; letter-spacing: 0.5px;">
+                                {{ exp.company_name }}
+                            </h5>
+                        </a>
                         <p class="text-muted">
                             {{ exp.start_date|date:"F Y"|capfirst }} - {% if exp.is_current %}Present{% else %}{{ exp.end_date|date:"F Y"|capfirst }}{% endif %}
                         </p>
