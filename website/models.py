@@ -45,7 +45,7 @@ class ProfessionalExperience(models.Model):
     end_date = models.DateField(blank=True, null=True)
     is_current = models.BooleanField(default=True)
     description = models.TextField()
-    skills = models.ManyToManyField(Skill, null=False, blank=False)
+    skills = models.ManyToManyField(Skill)
 
     class Meta:
         verbose_name_plural = "Professional Experiences"
@@ -53,3 +53,21 @@ class ProfessionalExperience(models.Model):
 
     def __str__(self) -> str:
         return f"{self.title} at {self.company_name}"
+
+
+class CommunityInvolvement(models.Model):
+    community_name = models.CharField(max_length=100)
+    community_link = models.URLField(null=True, blank=True)
+    community_logo = models.ImageField(upload_to="community_logos", blank=True, null=True)
+    title = models.CharField(max_length=100)
+    summary = models.TextField()
+    start_year = models.PositiveIntegerField()
+    end_year = models.PositiveIntegerField(blank=True, null=True)
+    color = models.CharField(max_length=10, blank=True, null=True)
+    
+    class Meta:
+        verbose_name_plural = "Community Involvements"
+        ordering = ["-start_year"]
+    
+    def __str__(self) -> str:
+        return f"{self.title} at {self.community_name}"
