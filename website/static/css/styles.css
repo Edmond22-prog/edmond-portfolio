@@ -246,26 +246,58 @@ body.dark-mode .hero-bg {
 }
 
 .tech-badge {
-    padding: 0.5rem 1rem;
+    padding: 0.75rem 1.25rem;
     background: var(--light-card);
     border-radius: 50px;
     font-weight: 500;
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid rgba(37, 99, 235, 0.1);
 }
 
 body.dark-mode .tech-badge {
     background: var(--dark-card);
+    border-color: rgba(37, 99, 235, 0.2);
 }
 
 .tech-badge:hover {
     transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
+    box-shadow: 0 8px 25px rgba(37, 99, 235, 0.2);
+    border-color: var(--primary-color);
 }
 
-.tech-badge i {
-    margin-right: 0.5rem;
+.tech-icon {
+    width: 16px !important;
+    height: 16px !important;
+    max-width: 16px;
+    max-height: 16px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+.tech-badge:hover .tech-icon {
+    transform: scale(1.1);
+}
+
+.tech-stats {
+    font-size: 0.75rem;
+    background: rgba(37, 99, 235, 0.1);
+    color: var(--primary-color);
+    padding: 0.2rem 0.6rem;
+    border-radius: 15px;
+    font-weight: 600;
+    margin-left: auto;
+    white-space: nowrap;
+}
+
+body.dark-mode .tech-stats {
+    background: rgba(37, 99, 235, 0.2);
+    color: #60a5fa;
 }
 
 /* Section Styles */

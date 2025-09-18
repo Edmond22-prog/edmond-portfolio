@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edmond Makolle - Backend Engineer & Community Leader</title>
+    {% block title %}
+    
+    {% endblock title %}
     
     <!-- Bootstrap 5 CSS -->
     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
@@ -27,26 +29,26 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#home">Edmond Makolle</a>
+            <a class="navbar-brand" href="{% url 'home-page' %}">Edmond Makolle</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#home" data-page="home">Accueil</a>
+                        <a class="nav-link active" href="{% url 'home-page' %}" data-page="home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#career" data-page="career">Parcours</a>
+                        <a class="nav-link" href="#career" data-page="career">Career</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#community" data-page="community">Communautés</a>
+                        <a class="nav-link" href="#community" data-page="community">Community</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#publications" data-page="publications">Publications</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#projects" data-page="projects">Projets</a>
+                        <a class="nav-link" href="#projects" data-page="projects">Projects</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact" data-page="contact">Contact</a>
@@ -59,74 +61,9 @@
         </div>
     </nav>
 
-    <!-- Home Section -->
-    <section id="home" class="section active hero">
-        <div class="hero-bg"></div>
-        <div class="floating-shapes">
-            <div class="shape"></div>
-            <div class="shape"></div>
-            <div class="shape"></div>
-        </div>
-        <div class="container">
-            <div class="row align-items-center min-vh-100">
-                <div class="col-lg-6">
-                    <div class="hero-content">
-                        <h1>Edmond Makolle</h1>
-                        <p class="hero-subtitle code-font">Backend Engineer & Community Leader</p>
-                        <p class="hero-description">
-                            Passionné par Python et Django, je construis des solutions backend robustes tout en contribuant activement à l'écosystème tech camerounais. Membre de la Django Software Foundation.
-                        </p>
-                        <div class="d-flex gap-3 mb-4">
-                            <a href="#projects" class="btn btn-primary">Voir mes projets</a>
-                            <a href="#contact" class="btn btn-outline">Me contacter</a>
-                        </div>
-                        <div class="tech-stack">
-                            <div class="tech-badge">
-                                <i class="fab fa-python"></i> Python
-                            </div>
-                            <div class="tech-badge">
-                                <i class="fas fa-code"></i> Django
-                            </div>
-                            <div class="tech-badge">
-                                <i class="fas fa-bolt"></i> FastAPI
-                            </div>
-                            <div class="tech-badge">
-                                <i class="fab fa-google"></i> Cloud Run
-                            </div>
-                            <div class="tech-badge">
-                                <i class="fas fa-database"></i> PostgreSQL
-                            </div>
-                            <div class="tech-badge">
-                                <i class="fas fa-mobile-alt"></i> Flutter
-                            </div>
-                        </div>
-                        <div class="social-links">
-                            <a href="https://github.com/Edmond22-prog" class="social-link" target="_blank">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="https://www.linkedin.com/in/edmondmakolle/" class="social-link" target="_blank">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                            <a href="https://edmondmakolle.medium.com/" class="social-link" target="_blank">
-                                <i class="fab fa-medium"></i>
-                            </a>
-                            <a href="https://x.com/EdmondMakolle" class="social-link" target="_blank">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="text-center">
-                        <img src="{% static 'img/profile.png' %}" 
-                             alt="Edmond Makolle" 
-                             class="img-fluid rounded-circle"
-                             style="max-width: 400px; animation: float 6s ease-in-out infinite; object-fit: cover; aspect-ratio: 1;">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    {% block body %}
+    
+    {% endblock body %}
 
     <!-- Career Section -->
     <section id="career" class="section">

@@ -1,5 +1,5 @@
 from django.shortcuts import render
 
 
-def display_base(request):
-    return render(request, "website/base.html")
+def home_page(request):
+    return render(request, "website/index.html")
