@@ -14,6 +14,7 @@
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
@@ -63,92 +64,7 @@
 
     {% include 'website/sections/career.html' %}
 
-    <!-- Community Section -->
-    <section id="community" class="section">
-        <div class="container">
-            <h2 class="section-title">Engagement Communautaire</h2>
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-4">
-                    <div class="community-card h-100">
-                        <div class="community-icon">
-                            <i class="fab fa-google"></i>
-                        </div>
-                        <h3>GDG Yaoundé</h3>
-                        <h5 class="text-primary mb-3">Co-Lead</h5>
-                        <p>Organisation d'événements techniques gratuits sur les technologies Google. Animation du DevFest Yaoundé 2024 et de workshops mensuels.</p>
-                        <div class="mt-3">
-                            <small class="text-muted">500+ membres actifs</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="community-card h-100">
-                        <div class="community-icon">
-                            <i class="fab fa-python"></i>
-                        </div>
-                        <h3>Django Cameroon</h3>
-                        <h5 class="text-primary mb-3">Community Lead</h5>
-                        <p>Animation de la communauté Django au Cameroun. Organisation de meetups et de sessions de coding pour promouvoir le framework.</p>
-                        <div class="mt-3">
-                            <small class="text-muted">Django Software Foundation Member</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="community-card h-100">
-                        <div class="community-icon">
-                            <i class="fas fa-laptop-code"></i>
-                        </div>
-                        <h3>Computer Club UY1</h3>
-                        <h5 class="text-primary mb-3">Manager</h5>
-                        <p>Gestion du club informatique de l'Université de Yaoundé I. Mentorat des étudiants et organisation d'hackathons.</p>
-                        <div class="mt-3">
-                            <small class="text-muted">200+ étudiants</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="community-card h-100">
-                        <div class="community-icon">
-                            <i class="fab fa-python"></i>
-                        </div>
-                        <h3>Python Cameroon</h3>
-                        <h5 class="text-primary mb-3">Co-Organizer</h5>
-                        <p>Promotion de Python au Cameroun à travers des workshops, des bootcamps et du contenu éducatif en français.</p>
-                        <div class="mt-3">
-                            <small class="text-muted">1000+ développeurs</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="community-card h-100">
-                        <div class="community-icon">
-                            <i class="fas fa-microphone"></i>
-                        </div>
-                        <h3>Speaker Technique</h3>
-                        <h5 class="text-primary mb-3">Conférencier</h5>
-                        <p>Interventions lors de conférences tech sur Django, FastAPI, Python et Google Cloud Platform.</p>
-                        <div class="mt-3">
-                            <small class="text-muted">10+ talks donnés</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="community-card h-100">
-                        <div class="community-icon">
-                            <i class="fas fa-chalkboard-teacher"></i>
-                        </div>
-                        <h3>Mentor Tech</h3>
-                        <h5 class="text-primary mb-3">Formateur</h5>
-                        <p>Accompagnement de développeurs juniors dans leur apprentissage de Python et du développement backend.</p>
-                        <div class="mt-3">
-                            <small class="text-muted">50+ mentorés</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    {% include 'website/sections/community.html' %}
 
     <!-- Publications Section -->
     <section id="publications" class="section">

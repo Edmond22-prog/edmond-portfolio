@@ -1,0 +1,36 @@
+{% load static %}
+
+<!-- Community Section -->
+<section id="community" class="section">
+    <div class="container">
+        <h2 class="section-title">Community Involvement</h2>
+        <div class="row g-4">
+            {% for item in communities %}
+                <div class="col-md-6 col-lg-4">
+                    <div class="community-card h-100" 
+                         style="transition: box-shadow 0.3s ease; cursor: pointer;"
+                         onclick="window.open('{{ item.community_link }}', '_blank')"
+                         onmouseover="this.style.boxShadow='0 8px 25px {% if item.color %}{{ item.color }}90{% else %}var(--primary-color)90{% endif %}'"
+                         onmouseout="this.style.boxShadow='0 2px 10px rgba(0,0,0,0.1)'">
+                        <div class="community-icon">
+                            <div class="community-logo-circle">
+                                <img src="{% if item.community_logo %}{{ item.community_logo.url }}{% else %}{% static 'img/default-community-img.png' %}{% endif %}" 
+                                    alt="{{ item.community_name }}" 
+                                    class="rounded-circle" 
+                                    style="width: 60px; height: 60px; object-fit: cover; border: 3px solid var(--primary-color); box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                            </div>
+                        </div>
+                        <h3 style="font-family: 'Poppins', sans-serif; font-weight: 600;">{{ item.community_name }}</h3>
+                        <h5 class="text-primary mb-3" style="font-family: 'Source Sans Pro', sans-serif; font-weight: 400;">{{ item.title }}</h5>
+                        <p>{{ item.summary }}</p>
+                        <div class="mt-3">
+                            <small class="text-muted">
+                                {{ item.start_year }} - {% if item.end_year %}{{ item.end_year }}{% else %}Present{% endif %}
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
