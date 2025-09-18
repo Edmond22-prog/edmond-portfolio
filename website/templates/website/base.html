@@ -16,6 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
@@ -67,97 +68,7 @@
 
     {% include 'website/sections/community.html' %}
 
-    <!-- Publications Section -->
-    <section id="publications" class="section">
-        <div class="container">
-            <h2 class="section-title">Publications & Présentations</h2>
-            <div class="row g-4">
-                <div class="col-lg-6">
-                    <div class="custom-card h-100">
-                        <h3>Articles Techniques</h3>
-                        <div class="mt-4">
-                            <div class="mb-4">
-                                <h5>Introduction à Django REST Framework</h5>
-                                <p class="text-muted">Guide complet pour créer des APIs RESTful avec Django</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <small class="text-muted">15 min de lecture • 2024</small>
-                                    <a href="https://edmondmakolle.medium.com/" class="btn btn-sm btn-outline-primary">
-                                        <i class="fas fa-external-link-alt"></i> Lire
-                                    </a>
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="mb-4">
-                                <h5>Déploiement avec Google Cloud Run</h5>
-                                <p class="text-muted">Comment déployer vos applications Python sur Cloud Run</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <small class="text-muted">10 min de lecture • 2024</small>
-                                    <a href="https://edmondmakolle.medium.com/" class="btn btn-sm btn-outline-primary">
-                                        <i class="fas fa-external-link-alt"></i> Lire
-                                    </a>
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="mb-4">
-                                <h5>FastAPI vs Django : Comparaison</h5>
-                                <p class="text-muted">Quel framework Python choisir pour votre projet ?</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <small class="text-muted">12 min de lecture • 2023</small>
-                                    <a href="https://edmondmakolle.medium.com/" class="btn btn-sm btn-outline-primary">
-                                        <i class="fas fa-external-link-alt"></i> Lire
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="custom-card h-100">
-                        <h3>Workshops & Talks</h3>
-                        <div class="mt-4">
-                            <div class="mb-4">
-                                <h5>Deploy an Application with Cloud Run</h5>
-                                <p class="text-muted">Workshop pratique sur le déploiement d'applications</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <small class="text-muted">DevFest Yaoundé 2024</small>
-                                    <a href="https://sessionize.com/edmond-makolle/" class="btn btn-sm btn-outline-primary">
-                                        <i class="fas fa-play-circle"></i> Slides
-                                    </a>
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="mb-4">
-                                <h5>Building REST APIs with Django</h5>
-                                <p class="text-muted">Introduction à Django REST Framework</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <small class="text-muted">GDG Yaoundé Meetup</small>
-                                    <a href="#" class="btn btn-sm btn-outline-primary">
-                                        <i class="fas fa-play-circle"></i> Slides
-                                    </a>
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="mb-4">
-                                <h5>Python pour les Débutants</h5>
-                                <p class="text-muted">Workshop d'initiation à la programmation Python</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <small class="text-muted">Computer Club UY1</small>
-                                    <a href="#" class="btn btn-sm btn-outline-primary">
-                                        <i class="fas fa-play-circle"></i> Slides
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="text-center mt-5">
-                <a href="https://edmondmakolle.medium.com/" target="_blank" class="btn btn-primary">
-                    <i class="fab fa-medium"></i> Voir tous mes articles
-                </a>
-            </div>
-        </div>
-    </section>
+    {% include 'website/sections/publications.html' %}
 
     <!-- Projects Section -->
     <section id="projects" class="section">
