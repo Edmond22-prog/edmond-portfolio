@@ -64,10 +64,28 @@ class CommunityInvolvement(models.Model):
     start_year = models.PositiveIntegerField()
     end_year = models.PositiveIntegerField(blank=True, null=True)
     color = models.CharField(max_length=10, blank=True, null=True)
-    
+
     class Meta:
         verbose_name_plural = "Community Involvements"
         ordering = ["-start_year"]
-    
+
     def __str__(self) -> str:
         return f"{self.title} at {self.community_name}"
+
+
+class Content(models.Model):
+    CONTENT_TYPE = (("Presentations", "Presentations"), ("Articles", "Articles"))
+
+    title = models.CharField(max_length=100)
+    summary = models.TextField()
+    type = models.CharField(max_length=20, choices=CONTENT_TYPE, default="Presentations")
+    scope = models.CharField(max_length=100, blank=True, null=True)
+    link = models.URLField()
+    published_at = models.DateField()
+
+    class Meta:
+        verbose_name_plural = "Content"
+        ordering = ["-published_at"]
+
+    def __str__(self) -> str:
+        return f"{self.title} ({self.type})"

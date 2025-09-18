@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from website.models import CommunityInvolvement, ProfessionalExperience, Skill
+from website.models import CommunityInvolvement, Content, ProfessionalExperience, Skill
 
 
 @admin.register(ProfessionalExperience)
@@ -16,6 +16,13 @@ class CommunityInvolvementAdmin(admin.ModelAdmin):
     list_display = ("community_name", "title", "start_year", "end_year")
     list_filter = ("start_year", "end_year")
     search_fields = ("community_name", "title", "summary")
+
+
+@admin.register(Content)
+class ContentAdmin(admin.ModelAdmin):
+    list_display = ("title", "type", "scope", "published_at")
+    list_filter = ("type",)
+    search_fields = ("title", "scope")
 
 
 admin.site.register(Skill)
