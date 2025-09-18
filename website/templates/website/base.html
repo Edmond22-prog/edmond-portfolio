@@ -4,10 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {% block title %}
-    
-    {% endblock title %}
-    
+    <title>Edmond Makolle - Back End Engineer, Communities Organizer & Freelancer</title>
+
     <!-- Bootstrap 5 CSS -->
     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
     
@@ -29,14 +27,14 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="{% url 'home-page' %}">Edmond Makolle</a>
+            <a class="navbar-brand" href="#home">Edmond Makolle</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="{% url 'home-page' %}" data-page="home">Home</a>
+                        <a class="nav-link active" href="#home" data-page="home">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#career" data-page="career">Career</a>
@@ -61,75 +59,9 @@
         </div>
     </nav>
 
-    {% block body %}
-    
-    {% endblock body %}
+    {% include 'website/index.html' %}
 
-    <!-- Career Section -->
-    <section id="career" class="section">
-        <div class="container">
-            <h2 class="section-title">Parcours Professionnel</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="custom-card">
-                        <h3>Backend Engineer</h3>
-                        <h5 class="text-primary">Bubo</h5>
-                        <p class="text-muted">Janvier 2024 - Présent</p>
-                        <p>Développement d'applications backend scalables avec Django et FastAPI. Implementation d'APIs RESTful et GraphQL pour des applications mobiles et web.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Django</span>
-                            <span class="tech-tag">FastAPI</span>
-                            <span class="tech-tag">PostgreSQL</span>
-                            <span class="tech-tag">Docker</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="custom-card">
-                        <h3>Freelance Python Instructor</h3>
-                        <h5 class="text-primary">Indépendant</h5>
-                        <p class="text-muted">2022 - Présent</p>
-                        <p>Formation et mentorat de développeurs juniors en Python et Django. Création de contenu pédagogique et animation de workshops techniques.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Django</span>
-                            <span class="tech-tag">Teaching</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="custom-card">
-                        <h3>Stagiaire Développeur</h3>
-                        <h5 class="text-primary">CUTI - Université de Yaoundé I</h5>
-                        <p class="text-muted">2022 - 2023</p>
-                        <p>Stage d'un an en développement d'applications. Participation à des projets universitaires et contribution au système d'information de l'université.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Web Development</span>
-                            <span class="tech-tag">Database</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="custom-card">
-                        <h3>Étudiant en Informatique</h3>
-                        <h5 class="text-primary">Université de Yaoundé I</h5>
-                        <p class="text-muted">2020 - Présent</p>
-                        <p>Licence en Informatique Fondamentale (Niveau 3). Focus sur l'algorithmique, les structures de données et le génie logiciel.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Computer Science</span>
-                            <span class="tech-tag">Algorithms</span>
-                            <span class="tech-tag">Software Engineering</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    {% include 'website/career.html' %}
 
     <!-- Community Section -->
     <section id="community" class="section">

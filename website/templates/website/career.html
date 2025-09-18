@@ -1,0 +1,31 @@
+<!-- Career Section -->
+<section id="career" class="section">
+    <div class="container">
+        <h2 class="section-title">Professional Background</h2>
+        <div class="timeline">
+            {% for exp in experiences %}
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="custom-card">
+                        <h3><strong>{{ exp.title }}</strong></h3>
+                        <a href="{{ exp.company_url }}"><h5 class="text-primary">{{ exp.company_name }}</h5></a>
+                        <p class="text-muted">
+                            {{ exp.start_date|date:"F Y"|capfirst }} - {% if exp.is_current %}Present{% else %}{{ exp.end_date|date:"F Y"|capfirst }}{% endif %}
+                        </p>
+                        <div class="mb-3">
+                            <span class="badge bg-primary me-2">{{ exp.employment_type }}</span>
+                            <span class="badge bg-secondary me-2">{{ exp.location_type }}</span>
+                            <span class="badge bg-info"><i class="fas fa-map-marker-alt me-1"></i>{{ exp.company_location }}</span>
+                        </div>
+                        <p>{{ exp.description }}</p>
+                        <div class="project-tech">
+                            {% for skill in exp.skills.all %}
+                                <span class="tech-tag">{{ skill.name }}</span>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
