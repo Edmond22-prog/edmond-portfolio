@@ -1,6 +1,11 @@
 from django.shortcuts import render
 
-from website.models import CommunityInvolvement, Content, ProfessionalExperience
+from website.models import (
+    CommunityInvolvement,
+    Content,
+    ProfessionalExperience,
+    ProfessionalProject,
+)
 
 
 def website(request):
@@ -13,6 +18,7 @@ def website(request):
             ),
             "articles": Content.objects.filter(type="Articles").order_by("-published_at"),
         },
+        "projects": ProfessionalProject.objects.all().order_by("-worked_at"),
     }
 
     return render(request, "website/base.html", context)

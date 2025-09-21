@@ -490,21 +490,67 @@ body.dark-mode .project-card {
 
 .project-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 15px 40px rgba(37, 99, 235, 0.2);
 }
 
 .project-image {
-    height: 200px;
+    height: 180px;
     background: var(--gradient);
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 3rem;
     color: white;
+    overflow: hidden;
+    border-radius: 15px 15px 0 0;
+}
+
+.project-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-img {
+    transform: scale(1.05);
+}
+
+.company-badge {
+    background: rgba(37, 99, 235, 0.1);
+    color: var(--primary-color);
+    padding: 0.3rem 0.6rem;
+    border-radius: 15px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    border: 1px solid rgba(37, 99, 235, 0.2);
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.company-badge:hover {
+    background: rgba(37, 99, 235, 0.2);
+    transform: scale(1.05);
+}
+
+body.dark-mode .company-badge {
+    background: rgba(37, 99, 235, 0.2);
+    color: #60a5fa;
+    border-color: rgba(37, 99, 235, 0.3);
+}
+
+body.dark-mode .company-badge:hover {
+    background: rgba(37, 99, 235, 0.3);
 }
 
 .project-content {
     padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .project-tech {

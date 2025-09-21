@@ -17,6 +17,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
@@ -70,148 +71,7 @@
 
     {% include 'website/sections/publications.html' %}
 
-    <!-- Projects Section -->
-    <section id="projects" class="section">
-        <div class="container">
-            <h2 class="section-title">Projets Personnels</h2>
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-4">
-                    <div class="project-card">
-                        <div class="project-image">
-                            <i class="fas fa-calculator"></i>
-                        </div>
-                        <div class="project-content">
-                            <h4>Calories App</h4>
-                            <p>Application mobile de calcul et suivi des calories avec interface intuitive.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Dart</span>
-                                <span class="tech-tag">Flutter</span>
-                                <span class="tech-tag">SQLite</span>
-                            </div>
-                            <div class="d-flex gap-2 mt-3">
-                                <a href="https://github.com/Edmond22-prog/calories_app" class="btn btn-sm btn-outline-primary">
-                                    <i class="fab fa-github"></i> Code
-                                </a>
-                                <a href="#" class="btn btn-sm btn-primary">
-                                    <i class="fas fa-external-link-alt"></i> Demo
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="project-card">
-                        <div class="project-image">
-                            <i class="fas fa-sitemap"></i>
-                        </div>
-                        <div class="project-content">
-                            <h4>Design Patterns Project</h4>
-                            <p>Implementation de design patterns classiques en Java avec exemples pratiques.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Java</span>
-                                <span class="tech-tag">OOP</span>
-                                <span class="tech-tag">Patterns</span>
-                            </div>
-                            <div class="d-flex gap-2 mt-3">
-                                <a href="https://github.com/Edmond22-prog/design-patterns-project" class="btn btn-sm btn-outline-primary">
-                                    <i class="fab fa-github"></i> Code
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="project-card">
-                        <div class="project-image">
-                            <i class="fas fa-brain"></i>
-                        </div>
-                        <div class="project-content">
-                            <h4>Top Quiz Kotlin</h4>
-                            <p>Application Android de quiz interactif avec système de scores et classements.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Kotlin</span>
-                                <span class="tech-tag">Android</span>
-                                <span class="tech-tag">Room DB</span>
-                            </div>
-                            <div class="d-flex gap-2 mt-3">
-                                <a href="https://github.com/Edmond22-prog/Top-Quiz-Kotlin" class="btn btn-sm btn-outline-primary">
-                                    <i class="fab fa-github"></i> Code
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="project-card">
-                        <div class="project-image">
-                            <i class="fas fa-tasks"></i>
-                        </div>
-                        <div class="project-content">
-                            <h4>Django Todo Workshop</h4>
-                            <p>Application todo list complète pour apprendre Django avec authentification.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Django</span>
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">Bootstrap</span>
-                            </div>
-                            <div class="d-flex gap-2 mt-3">
-                                <a href="https://github.com/Edmond22-prog" class="btn btn-sm btn-outline-primary">
-                                    <i class="fab fa-github"></i> Code
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="project-card">
-                        <div class="project-image">
-                            <i class="fas fa-dollar-sign"></i>
-                        </div>
-                        <div class="project-content">
-                            <h4>Sponsorship Script</h4>
-                            <p>Script d'automatisation pour la gestion de sponsorships et partenariats.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">Automation</span>
-                                <span class="tech-tag">APIs</span>
-                            </div>
-                            <div class="d-flex gap-2 mt-3">
-                                <a href="https://github.com/Edmond22-prog" class="btn btn-sm btn-outline-primary">
-                                    <i class="fab fa-github"></i> Code
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="project-card">
-                        <div class="project-image">
-                            <i class="fas fa-school"></i>
-                        </div>
-                        <div class="project-content">
-                            <h4>School Management System</h4>
-                            <p>Système de gestion scolaire complet avec Django et interface admin.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Django</span>
-                                <span class="tech-tag">PostgreSQL</span>
-                                <span class="tech-tag">REST API</span>
-                            </div>
-                            <div class="d-flex gap-2 mt-3">
-                                <a href="https://github.com/Edmond22-prog" class="btn btn-sm btn-outline-primary">
-                                    <i class="fab fa-github"></i> Code
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="text-center mt-5">
-                <a href="https://github.com/Edmond22-prog" target="_blank" class="btn btn-primary">
-                    <i class="fab fa-github"></i> Voir tous mes projets sur GitHub
-                </a>
-            </div>
-        </div>
-    </section>
+    {% include 'website/sections/projects.html' %}
 
     <!-- Contact Section -->
     <section id="contact" class="section">
