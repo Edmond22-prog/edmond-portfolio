@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils import timezone
 
 
 class Skill(models.Model):
@@ -89,3 +90,22 @@ class Content(models.Model):
 
     def __str__(self) -> str:
         return f"{self.title} ({self.type})"
+
+
+class ProfessionalProject(models.Model):
+    name = models.CharField(max_length=100)
+    description = models.TextField()
+    picture_overview = models.ImageField(upload_to="projects", blank=True, null=True)
+    skills = models.ManyToManyField(Skill)
+    built_for = models.CharField(max_length=100, null=True, blank=True)
+    link = models.URLField(null=True, blank=True)
+    worked_at = models.DateField(default=timezone.now)
+
+    class Meta:
+        verbose_name_plural = "Professionals Projects"
+
+    def __str__(self) -> str:
+        if self.link:
+            return f"{self.name} ({self.link})"
+
+        return self.name

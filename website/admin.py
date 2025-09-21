@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from website.models import CommunityInvolvement, Content, ProfessionalExperience, Skill
+from website.models import CommunityInvolvement, Content, ProfessionalExperience, ProfessionalProject, Skill
 
 
 @admin.register(ProfessionalExperience)
@@ -23,6 +23,13 @@ class ContentAdmin(admin.ModelAdmin):
     list_display = ("title", "type", "scope", "published_at")
     list_filter = ("type",)
     search_fields = ("title", "scope")
+
+
+@admin.register(ProfessionalProject)
+class ProfessionalProjectAdmin(admin.ModelAdmin):
+    filter_horizontal = ("skills",)
+    list_filter = ("skills__name",)
+    search_fields = ("name", "description", "built_for")
 
 
 admin.site.register(Skill)
